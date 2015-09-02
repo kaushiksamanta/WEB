@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Facebook</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+  <script src="javascript/custom.js"></script>
+	</head>
+
+  <body>
+    <div id="wrap">
+      <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://facebook.com">Facebook</a>
+          </div>
+		  <div class="collapse navbar-collapse">
+           	<form class="navbar-form navbar-right" id="header-form"  method="post" action="home.html" onsubmit="return login_validator()">
+				  <div class="lt-left">
+					  <div class="form-group">
+						<label for="exampleInputEmail2"><br>Email or Phone</label>
+						<input type="email" class="form-control input-sm" id="login_mail" placeholder="Email or Phone">
+					  </div>
+					  <div class="form-group">
+						<label for="exampleInputPassword2"><br>Password</label>
+						<input type="password" class="form-control input-sm" id="login_passwd" placeholder="Password">
+					  </div>
+					  <div class="checkbox">
+						<label>
+						  <input type="checkbox"> Remember me
+						</label>
+					  </div>
+				  </div>
+				  <div class="lt-right">
+					<button type="submit" class="login-btn">Login</button>
+				  </div>
+				</form>
+
+          </div>
+        </div>
+      </div>
+      <div class="container" id="home">
+		<div class="row">
+			<div class="col-md-7">
+				<h3 class="slogan">
+					<br><br>Facebook helps you connect and share with the people in your life.
+				</h3>
+				<img src="world.png" class="img-responsive" />
+			</div>
+			<div class="col-md-5">
+			<form action="home.html" method="post" class="form" onsubmit="return signup_validator()">
+			<legend><br><a>Create your account</a></legend>
+            <h4>It's free and always will be.</h4>
+            <div class="row">
+                <div class="col-xs-6 col-md-6 ">
+                    <input class="form-control input-lg " name="firstname" placeholder="First Name" type="text" id="first_name" onblur="firstname_validator()"/>
+                </div>
+                <div class="col-xs-6 col-md-6">
+                    <input class="form-control input-lg" name="lastname" placeholder="Last Name" type="text" id="surname" onblur="surname_validator()"/>
+                </div>
+            </div>
+            <input class="form-control input-lg" name="youremail" placeholder="Your Email" type="email" id="email" onblur="mail_validator()"/>
+            <input class="form-control input-lg" name="reenteremail" placeholder="Re-enter Email" type="email" id="confirm" onblur="mail_compair()"/>
+            <input class="form-control input-lg" name="password" placeholder="New Password" type="password" id="passwd" onblur="passwd_validator()"/>
+            <label for="">
+                Birth Date</label>
+            <div class="row">
+                <div class="col-xs-4 col-md-4">
+                    <select class="form-control input-lg" id="month" onchange="month_selector()">
+                        <option value="Month">Month</option>
+                        <option>JANUARY</option>
+                        <option>FEBRUARY</option>
+                        <option>MARCH</option>
+                        <option>APRIL</option>
+                        <option>MAY</option>
+                        <option>JUNE</option>
+                        <option>JULY</option>
+                        <option>AUGUST</option>
+                        <option>SEPTEMBER</option>
+                        <option>OCTOBER</option>
+                        <option>NOVEMBER</option>
+                        <option>DECEMBER</option>
+                    </select>
+                </div>
+                <div class="col-xs-4 col-md-4">
+                    <select class="form-control input-lg" id="day" onchange="day_selector()">
+                        <option value="Day">Day</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option>26</option>
+                        <option>27</option>
+                        <option>28</option>
+                        <option>29</option>
+                        <option>30</option>
+                        <option>31</option>
+                    </select>
+                </div>
+                <div class="col-xs-4 col-md-4">
+                    <select class="form-control input-lg" id="year" onchange="year_selector()">
+                        <option value="Year">Year</option>
+                        <option>1990</option>
+                        <option>1991</option>
+                        <option>1992</option>
+                        <option>1993</option>
+                        <option>1994</option>
+                        <option>1995</option>
+                        <option>1996</option>
+                        <option>1997</option>
+                        <option>1998</option>
+                        <option>1999</option>
+                        <option>2000</option>
+                        <option>2001</option>
+                        <option>2002</option>
+                        <option>2003</option>
+                        <option>2004</option>
+                        <option>2005</option>
+                        <option>2006</option>
+                        <option>2007</option>
+                        <option>2008</option>
+                        <option>2009</option>
+                        <option>2010</option>
+                        <option>2011</option>
+                        <option>2012</option>
+                        <option>2013</option>
+                        <option>2014</option>
+                        <option>2015</option>
+                    </select>
+                </div>
+            </div>
+            <label class="radio-inline">
+                <input type="radio" name="Gender" id="male" value="male" />
+                Male
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="Gender" id="female" value="female" />
+                Female
+            </label>
+            <br />
+			<span class="help-block">By clicking Create my account, you agree to our Terms and that you have read our Data Use Policy, including our Cookie Use.</span>
+            <button class="btn btn-lg btn-primary btn-block signup-btn" type="submit" value="Create_new">
+                Create my account</button>
+            </form>
+
+			</div>
+		</div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted credit"><a>Made By Kaushik</a></p>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<html>
+<head>
+	<title></title>
+	<title>Facebook-Log In or Sign up</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"></link>
+  <link rel="stylesheet" type="text/css" href="css/home.css"></link>
+	<link rel="stylesheet" type="text/css" href="css/image.css"></link>
+	<script type="text/javascript" src="javascript/home.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="javascript/bootstrap.js"></script>
+	<script type="text/javascript" src="javascript/image.js"></script>
+	<meta charset="UTF-8" />
+</head>
+<body onload="checkActiveUser()">
+  <div class="row">
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><strong>&nbsp;&nbsp;&nbsp;&nbsp;Facebook&nbsp;&nbsp;&nbsp;&nbsp;</strong></a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#"><strong>Home</strong><span class="sr-only">(current)</span></a></li>
+        <li><a id="link" href="#"></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Settings<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Create Page</a></li>
+            <li><a href="#">Manage Pages</a></li>
+            <li><a href="#">Create Group</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Manage Group</a></li>
+            <li class="divider"></li>
+            <li><a href="admin.html">Admin Panel</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="facebook.html" onclick="logout()">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+<div class="row">
+      <div class="col-md-3">
+        <div class="well">
+        <h3>Your Profile</h3>
+        <ul class="nav nav-pills nav-stacked">
+          <li class="active"><a href="#">News Feed</a></li>
+          <li><a href="#">Messages</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Photos</a></li>
+          <li><a href="#">Browse</a></li>
+          <li class="active"><a href="#">Pages</a></li>
+          <li><a href="#">Pages Feed</a></li>
+          <li><a href="#">Like Pages</a></li>
+          <li><a href="#">Create Page</a></li>
+          <li><a href="#">Create Ad</a></li>
+					<li class="active"><a href="#">Groups</a></li>
+					<li><a href="#">Create Group</a></li>
+          <li><a href="#">New Group</a></li>
+        </ul>
+      </div>
+    </div>
+      <div class="col-md-6">
+        <div class="well">
+						<div>
+							<h6><strong>Status Update</strong></h6>
+						</div>
+						<div>
+							<textarea placeholder="Write a new Status update!!" id="post" rows="5" autofocus class="col-sm-12"></textarea><br />
+							<button type="button" class="btn btn-primary pull-right" onclick="new_post()">Post</button>
+						</div>
+						<div id="post_area">
+						</div>
+        </div>
+			</div>
+           <div class="col-md-3">
+             <div class="well">
+             <h3>Profile Picture</h3>
+						 <div id="gallery">
+				     </div>
+
+             <ul class="nav nav-pills nav-stacked">
+							 <div id="thumbnail">
+							 </div>
+							 <div id="upload" class="drop-area">
+								   Upload
+								</div>
+               <li><input type="file" style="display:none" id="upload-image" multiple="multiple"></input></li>
+               <li class="active"><a href="#" id="friend"></a></li>
+							 <div id="blank">
+							 </div>
+             </ul>
+           </div>
+         </div>
+      </div>
+<div class="well">
+<footer><a href="aboutus.html">About-US</a></footer>
+</div>
+</body>
+</html>
